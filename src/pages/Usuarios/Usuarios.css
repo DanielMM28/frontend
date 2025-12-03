@@ -1,0 +1,112 @@
+/* Ejemplo de estilos que replican el diseño de tu componente */
+.user-management-container {
+    padding: 20px;
+}
+
+.user-management-title {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #333;
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+td.actions-cell {
+  position: relative;
+  width: 70px;
+  margin-top: 50px;
+}
+
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px 10px;
+    background-color: #fff;
+    flex-grow: 1;
+    max-width: 500px; /* Limitar el tamaño del buscador */
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    padding: 0;
+    width: 100%;
+    font-size: 1em;
+}
+
+.user-management-table th,
+.user-management-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.user-management-table th {
+    font-weight: bold;
+    color: #666;
+    background-color: #f7f7f7;
+}
+
+/* Estilos para el badge de Estado */
+.estado {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    display: inline-block;
+}
+
+.estado-activo {
+    background-color: #e6f7e9; /* Fondo verde claro */
+    color: #38761d; /* Texto verde oscuro */
+}
+
+.estado-inactivo {
+    background-color: #fcecec; /* Fondo rojo/gris claro */
+    color: #a82424; /* Texto rojo oscuro */
+}
+
+.icon-btn {
+    /* Estilo del botón de tres puntos */
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 1em;
+    padding: 5px;
+    
+}
+.action-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 0%;
+  background: #fff;
+  border: 1px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+margin-top: -100px;
+}
+
+.action-btn:hover {
+  background: #ffffff;
+}
+
+td .dropdown {
+  display: flex;
+  justify-content: center;
+}
+.options-icon {
+    font-size: 1.2em;
+}

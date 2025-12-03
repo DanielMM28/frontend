@@ -1,0 +1,45 @@
+.fichas-container {
+    padding: 20px;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.historial-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+.historial-table td.estado {
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.estado-activo {
+    color: #009900;
+}
+
+.estado-finalizada {
+    color: #cc0000;
+}
+
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px 6px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    gap: 10px;
+    position: relative;
+}
