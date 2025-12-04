@@ -43,3 +43,28 @@
     gap: 10px;
     position: relative;
 }
+#menu {
+    
+    top: 45px;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    
+}
+.search-box input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 1em;
+}
+.historial-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+#menu :hover {
+    background: #ffffff;
+}

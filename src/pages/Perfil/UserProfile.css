@@ -1,0 +1,56 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-container {
+  /* outline: 1px solid red; */
+  display: grid;
+  grid-template-columns: 25% 65%;
+  /* padding-right: ; */
+  width: 100vw;
+
+}
+
+.contenedor-general {
+    width: 68.5vw;
+}
+
+
+
+.container-all {
+  /* outline: 1px solid rgb(151, 220, 47); */
+  background-color: rgba(245, 245, 245, 1);
+ 
+  color: #000;
+  margin-left: -320px;
+   width: 100%;
+}
+
+.separator {
+  margin-top: 4%;
+  margin-left: 4%;
+}
+
+.title-my-profile {
+  /* outline: 1px solid red; */
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.info-my-profile {  
+  margin-top: 0.5%;
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.profile-content {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  margin-top: 2%;
+  /* outline: 1px solid black; */
+  /* outline: 1px solid rgb(151, 220, 47); */
+}

@@ -222,7 +222,7 @@ const UserManagementPage = () => {
                       {user.estado}
                     </td>
                     <td>
-                      <div className="dropdown" style={{ width: "0px" }}>
+                      <div className="dropdown" id ="menu">
                         <button
                           className="btn action-btn"
                           data-bs-toggle="dropdown"

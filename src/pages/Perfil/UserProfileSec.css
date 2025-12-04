@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.containers {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  width: 950px;
+  margin: 4% 0;
+}
+
+.carta-de-seguridad {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fcfcfc;
+}
+
+.containers h2 {
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: #292929;
+}
+
+.info-de-seguridad {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-grow: 1;
+}
+
+.icon-de-seguridad {
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+
+.descripcion-de-seguridad {
+  margin-top: 0.5%;
+  margin-bottom: 1.5%;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.lista-de-seguridad {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn-de-seguridad {
+  padding: 8px 15px;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  background-color: #0b4700;
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-de-seguridad:hover {
+  background-color: #e0e0e0;
+  border-color: #c0c0c0;
+}

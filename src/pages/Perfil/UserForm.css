@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form-card {
+  margin-left: 4%;
+
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding-bottom: 3.5%;
+  padding-top: 2%;
+  padding-left: 4%;
+  padding-right: 4%;
+  width: 670px;
+}
+
+.contenedor-marginado {
+  margin: 3%;
+}
+
+.title-right {
+  font-size: 15px;
+  color: #292929;
+}
+
+.parragraph-right {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.grupo-campo {
+  margin-top: 1%;
+}
+
+.title-camps {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.contenedor-both-camps {
+  /* outline: 1px solid red; */
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 2%;
+}
+
+.input-with-icon {
+  /* outline: 1px solid red; */
+  display: flex;
+  align-items: center;
+  background-color: #cecece;
+  border-radius: 3px;
+  /* padding: 0.3% 0; */
+  margin-top: 1%;
+}
+
+.otro-div-marginado {
+  /* margin: 2%; */
+  padding: 1%;
+  display: flex;
+  /* outline: 1px solid red; */
+}
+
+.input-icon {
+  margin-right: 5%;
+  margin-left: 5%;
+  color: #979797;
+}
+
+.input-readonly {
+  background-color: #cecece;
+  border: none;
+  color: #343434;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  width: 260px;
+}
+
+.input-readonly:focus {
+  outline: none;
+}
+
+.field-mensaje {
+  font-size: 12px;
+  margin-top: 1%;
+  color: #343434;
+}
+
+.contenedo-btn {
+  /* outline: 1px solid red; */
+  display: flex;
+  justify-content: end;
+  margin-top: 2%;
+}
+
+.save-changes-button {
+  /* outline: 1px solid red; */
+  background-color: #0b4700;
+}

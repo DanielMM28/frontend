@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sidebar-container {
+  /* outline: 1px solid red; */
+  border: 1px solid #b4b4b4;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.contenedo-marginado {
+  margin: 6%;
+}
+
+.avatar-sesion {
+  text-align: center;
+}
+
+.container-img {
+  /* outline: 1px solid red; */
+  margin-top: 4%;
+  margin-bottom: 4%;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.title-left-profile {
+  font-size: 15px;
+  color: #292929;
+}
+
+.user-nombr-compl {
+  /* outline: 1px solid red; */
+  font-weight: bold;
+}
+
+.user-email-ins {
+  /* outline: 1px solid red; */
+  font-size: 12px;
+  color: #2b2b2b;
+}
+
+.user-rol {
+  /* outline: 1px solid red; */
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+
+.role-useer {
+  /* outline: 1px solid red; */
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  padding: 2% 8%;
+  border-radius: 4px;
+  background-color: #2ca81f;
+}
+
+.cambiar-foto-btn {
+  background-color: #fff;
+  border: 1px solid #2b2b2b;
+  padding: 2% 33.5%;
+  border-radius: 7px;
+  color: #000;
+  font-size: 15px;
+  margin-bottom: 10%;
+  transition: 0.2s ease-in;
+}
+
+.cambiar-foto-btn:hover  {
+  box-shadow: 1px 1px 5px;
+  border: 1px solid #696969a0;
+  margin-bottom: 10%;
+}
+
+.info-detalles {
+  /* outline: 1px solid red; */
+  padding-top: 4%;
+  border-top: 1px solid #929292;
+  color: #494949;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.center-text {
+  /* outline: 1px solid red; */
+  display: flex;
+  text-align: center;
+}
+.iconos {
+  margin-right: 2%;
+}
+
+.calendar-text {
+  display: flex;
+  text-align: center;
+}

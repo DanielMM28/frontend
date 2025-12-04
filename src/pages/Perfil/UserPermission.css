@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  margin-bottom: 3%;
+  
+  
+  width: 950px;
+}
+
+.container h2 {
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: #292929;
+}
+
+.descripcion-de-permisos {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.listadepermisos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 5px;
+}
+
+.permisos-asignados {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 6px 12px;
+  font-size: 0.85em;
+  font-weight: 500;
+
+  background-color: #f0f0f0;
+  color: #494949;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+}

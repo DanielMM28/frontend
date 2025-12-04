@@ -3,7 +3,8 @@ import { Button, Spinner, Dropdown } from "react-bootstrap";
 import CrearFicha from "./crearfichas";
 import EditarFicha from "./editarfichas";
 import EliminarFicha from "./eliminarfichas";
-import { BsThreeDotsVertical } from "react-icons/bs"; 
+import { BsThreeDotsVertical } from "react-icons/bs";
+import "./HistorialFichas.css"; 
 
 const Fichas = () => {
   const [fichas, setFichas] = useState<any[]>([]);
@@ -34,8 +35,8 @@ const Fichas = () => {
 
   return (
     <div className="container py-4">
-      <div className="d-flex justify-content-between align-items-center mb-3">
-        <h2>Gestión de Fichas</h2>
+      <div className="d-flex justify-content-between    align-items-center mb-4">
+        <h2 className="mb-4" style={{fontSize:"30px"}} >Gestión de Fichas</h2>
         <Button variant="primary" onClick={() => setMostrarCrear(true)}>
           Crear Ficha
         </Button>
@@ -86,14 +87,14 @@ const Fichas = () => {
                       <td>{f.fechas.fin}</td>
 
                      <td>
-                      <div className="dropdown" style={{ width: "0px" }}>
+                      <div className="dropdown" id="menu">
                         <button
                           className="btn action-btn"
                           data-bs-toggle="dropdown"
                         >
                           <BsThreeDotsVertical style={{ width: 18, height: 18 }} />
                         </button>
-                        <ul className="dropdown-menu">
+                        <ul className="dropdown-menu dropdown-menu-end">
                           <li>
                             <button
                               className="dropdown-item"

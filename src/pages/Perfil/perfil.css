@@ -1,0 +1,61 @@
+.perfil-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.perfil-card {
+  width: 100%;
+  max-width: 450px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.perfil-avatar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.perfil-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ddd;
+}
+
+.perfil-nombre {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.perfil-rol {
+  font-size: 16px;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.perfil-info {
+  text-align: left;
+  margin: 20px 0;
+}
+
+.perfil-info p {
+  margin: 6px 0;
+}
+
+.perfil-buttons {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px;
+  font-size: 16px;
+}

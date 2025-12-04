@@ -79,7 +79,7 @@ td.actions-cell {
     background: none;
     border: none;
     cursor: pointer;
-    color: #ffffff;
+    color: #df1313;
     font-size: 1em;
     padding: 5px;
     
@@ -106,7 +106,22 @@ margin-top: -100px;
 td .dropdown {
   display: flex;
   justify-content: center;
+    align-items: center;
+   
+    top: 50px;
 }
 .options-icon {
     font-size: 1.2em;
+}
+#menu {
+    
+    top: 45px;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background: #f5f4f4;
+    border: 1px solid #f5f4f4;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    
 }

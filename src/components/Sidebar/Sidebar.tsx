@@ -72,7 +72,14 @@ const Sidebar = () => {
                         Comites en Curso
                     </NavLink>
                 </div>
-
+<NavLink  
+                    to="/comites/seguimientos" 
+                    className={({ isActive }) => 
+                        isActive ? "sidebar-item active" : "sidebar-item" 
+                    } 
+                > 
+                    <FaHome />  Seguimiento y Compromisos
+                </NavLink> 
                 <NavLink  
                     to="/programas y aprendices" 
                     className={({ isActive }) => 

@@ -2,7 +2,8 @@ import { useState } from 'react';
 import './Login.css';
 import LogoSena from '../../assets/sena-logo.png';
 import { useNavigate } from 'react-router-dom';
-import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 
 const Login = () => {
@@ -28,7 +29,8 @@ const Login = () => {
     }
 
     navigate('/inicio');
-    localStorage.setItem("user", JSON.stringify(data));
+    localStorage.setItem("user", JSON.stringify(data.usuario));
+
     localStorage.setItem("token", data.token);
     
   };
@@ -78,7 +80,9 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-
+<Link to='/forgot' className='forgot-link'>
+              <a href='#'>¿Olvidaste tu contraseña'</a>
+            </Link>
           <button type="submit" className="btn-login">
             Ingresar
           </button>
