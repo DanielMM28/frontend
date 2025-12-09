@@ -37,6 +37,7 @@ interface FormData {
   usuCorreo: string;
   usuTel: string;
   rolId: number;
+  usuApe: string;
 }
 
 const UserManagementPage = () => {
@@ -54,6 +55,7 @@ const UserManagementPage = () => {
     usuCorreo: "",
     usuTel: "",
     rolId: 0,
+    usuApe: "",
   });
 
 
@@ -94,6 +96,7 @@ const UserManagementPage = () => {
       usuCorreo: user.correo,
       usuTel: user.telefono,
       rolId: user.rol.id,
+      usuApe: user.apellido,
     });
   };
 
