@@ -2,7 +2,6 @@ import React from "react";
 import './UserProfile.css'
 import UserSidebar from "./UserSidebar";
 import UserForm from "./UserForm";
-import UserProfileSecurity from "./UserProfileSecurity";
 import UserPermission from "./UserPermission";
 
 interface UserProfileProps {
@@ -38,11 +37,8 @@ const UserProfile: React.FC<UserProfileProps> = ({ user }) => {
                 <UserForm user={user}></UserForm>
               </div>
             </div>
-
-            <div className="profile-security">
-              <UserProfileSecurity></UserProfileSecurity>
-            </div>
-
+<hr />
+            
             <div className="profile-permission">
               <UserPermission></UserPermission>
             </div>

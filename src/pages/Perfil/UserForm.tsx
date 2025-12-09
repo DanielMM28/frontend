@@ -51,7 +51,7 @@ const UserForm: React.FC<UserFormProps> = ({ user }) => {
       </div>
 
       <div className="contenedo-btn">
-        <button className="btn-de-seguridad">Modificar datos</button>
+        <button className="btn btn-success">Modificar datos</button>
       </div>
     </div>
     </div>

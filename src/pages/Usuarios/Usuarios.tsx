@@ -1,8 +1,8 @@
 import { useEffect, useState, type SVGProps } from "react";
 import "./Usuarios.css";
-import CrearUsuario from "./CrearUsuarios";
-import ModalEditarUsuario from "./editarusuarios";
-import ModalEliminarUsuario from "./eliminarusuarios";
+import CrearUsuario from "./Crear/CrearUsuarios";
+import ModalEditarUsuario from "./Editar/editarusuarios";
+import ModalEliminarUsuario from "./Eliminar/eliminarusuarios";
 import type { JSX } from "react/jsx-runtime";
 
 // Icono de opciones

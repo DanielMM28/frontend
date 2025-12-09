@@ -1,4 +1,5 @@
 export interface Acta {
+  ficId: number | undefined;
   ID: number;
   tema: string;
   descripcion: string;

@@ -1,85 +1,62 @@
 import './Header.css';
 import { FaBell, FaUserCircle } from 'react-icons/fa';
-import { useState, useRef, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 interface Props {
-  onLogout: () => void;
+    onLogout: () => void
 }
 
 const Header: React.FC<Props> = ({ onLogout }) => {
-  const [open, setOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement | null>(null);
-  const location = useLocation();
-  const navigate = useNavigate();
+    const [open, setOpen] = useState(false)
 
-
+    const location = useLocation()
   const usuario = JSON.parse(localStorage.getItem("user") || "null");
 
   const nombre = usuario?.nombreCompleto || "Usuario";
   const rol = usuario?.rolNombre || "Sin rol";
 
-  const titles: Record<string, string> = {
-    "/inicio": "Inicio",
-    "/historial": "Historial de Comités",
-  };
+    const titles: Record<string, string> = {
+        '/inicio': 'Inicio',
+        '/comites/encurso': 'Comites en Curso',
+        '/comites/seguimientos': "Seguimientos y Compromisos",
+        '/historial/comites': 'Registros Comites',
+        '/historial/fichas': 'Registros Fichas',
+    }
 
-  const title = titles[location.pathname] || "Sistema Comité";
+    const title = titles[location.pathname] || 'Sistema Comité' 
 
-
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
-        setOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  return (
-    <div className='header'>
-      <div className='left'>
-        <h2>{title}</h2>
-      </div>
-
-      <div className='right' ref={menuRef}>
-        
-        
-        <button className='icon-btn'>
-          <FaBell className='icon-btn' />
-        </button>
-
-        <div className='user-info' onClick={() => setOpen(!open)}>
-          <FaUserCircle size={28} />
-          <div className='user-text'>
+    return (
+        <div className='ui-header'>
+            <div className='ui-left'>
+                <h2>{title}</h2>
+            </div>
+            <div className='ui-right'>
+                <button className='ui-icon-btn'>
+                <FaBell className='ui-icon-btn' />
+             </button>
+            <div className='ui-user-info' onClick={() => setOpen(!open)}>
+                <FaUserCircle size={28} />
+                <div className='user-text'>
             <span className="name">{nombre}</span>
+            <br />
             <span className="role">{rol}</span>
           </div>
+            </div>
+            {open && (
+            <div className='ui-dropdown'>
+                <Link to='/perfil' className='ui-dropdown-link'>
+                    <button className='ui-dropdown-item' >Mi Perfil</button>
+                </Link>
+                <Link to='/' className='ui-dropdown-link'>
+                    <button className='ui-dropdown-item' onClick={onLogout}>Cerrar Sesión</button>
+                </Link>
+            </div>
+            )}
         </div>
-
-        
-        {open && (
-          <div className='dropdown'>
-            <button
-              className='dropdown-item'
-              onClick={() => {
-                setOpen(false);
-                navigate("/perfil");
-              }}
-            >
-              Mi Perfil
-            </button>
-
-            <button className='dropdown-item' onClick={onLogout}>
-              Cerrar Sesión
-            </button>
-          </div>
-        )}
-      </div>
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
