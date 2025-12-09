@@ -1,5 +1,20 @@
-import type { FormData, User } from "./types";
+interface User {
+  id: number;
+  nombre: string;
+  apellido: string;
+  correo: string;
+  telefono: string;
+  estado: "Activo" | "Inactivo";
+  rol: { id: number; nombre: string };
+}
 
+interface FormData {
+  usuNom: string;
+  usuCorreo: string;
+  usuTel: string;
+  rolId: number;
+  usuApe: string;
+}
 interface EditModalProps {
   usuario: User | null;
   form: FormData;
