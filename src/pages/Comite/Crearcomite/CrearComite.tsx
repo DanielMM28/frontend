@@ -88,44 +88,77 @@ const CrearComite = () => {
   };
 
   const handleSubmit = async () => {
-    if (!validateBeforeSubmit()) return;
+  if (!validateBeforeSubmit()) return;
 
-    // construyo payload según tu ejemplo de JSON
-    const payload: any = {
-      tema: formData.tema,
-      descripcion: formData.descripcion,
-      objetivo: formData.objetivo,
-      conclusion: formData.conclusion,
-      version: formData.version ?? "1.0",
-      anexos: formData.anexos ?? null,
-      fecha: formData.fecha,
-      horaInicio: formData.horaInicio,
-      horaFin: formData.horaFin || "00:00:00",
-      // si envías una ficha principal:
-      Ficha: formData.Ficha ?? (formData.fichasInvolucradas?.[0] ?? null),
-      // campos adicionales:
-      fichas: formData.fichasInvolucradas ?? [],
-      aprendices: formData.aprendices ?? [],
-      miembrosComite: formData.miembrosComite ?? [],
-      asistentesExtra: formData.asistentesExtra ?? [],
-      agenda: formData.agenda ?? [],
-      objetivosLista: formData.objetivosLista ?? [],
-    };
+  const payload: any = {
+    tema: formData.tema,
+    descripcion: formData.descripcion,
+    objetivo: formData.objetivo,
+    conclusion: formData.conclusion,
+    version: formData.version ?? "1.0",
+    anexos: formData.anexos ?? null,
+    fecha: formData.fecha,
+    horaInicio: formData.horaInicio,
+    horaFin: formData.horaFin || "00:00:00",
 
-    try {
-      setLoading(true);
-      
-      toast.success("Comité creado correctamente");
-     
-      // opcional: limpiar formulario o redirigir
-    } catch (err: any) {
-      console.error("Error al crear comité:", err);
-      const msg = err?.response?.data?.message ?? "Error creando comité";
-      toast.error(msg);
-    } finally {
-      setLoading(false);
-    }
+    Ficha: formData.Ficha ?? (formData.fichasInvolucradas?.[0] ?? null),
+
+    fichas: formData.fichasInvolucradas ?? [],
+    aprendices: formData.aprendices ?? [],
+    miembrosComite: formData.miembrosComite ?? [],
+    asistentesExtra: formData.asistentesExtra ?? [],
+    agenda: formData.agenda ?? [],
+    objetivosLista: formData.objetivosLista ?? [],
   };
+
+  try {
+    setLoading(true);
+
+    const res = await fetch("http://localhost:3000/api/comites", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    });
+
+    if (!res.ok) {
+      const errorData = await res.json();
+      throw new Error(errorData?.message || "Error al crear el comité");
+    }
+
+    toast.success("✅ Comité creado correctamente");
+
+    // ✅ Opcional: limpiar formulario
+    setFormData({
+      tema: "",
+      descripcion: "",
+      objetivo: "",
+      conclusion: "",
+      fecha: "",
+      horaInicio: "",
+      horaFin: "",
+      version: "1.0",
+      anexos: null,
+      Ficha: null,
+      fichasInvolucradas: [],
+      aprendices: [],
+      miembrosComite: [],
+      asistentesExtra: [],
+      agenda: [],
+      objetivosLista: [],
+    } as FormDataComite);
+
+    setStep(1);
+
+  } catch (err: any) {
+    console.error("Error al crear comité:", err);
+    toast.error(err.message || "❌ Error creando comité");
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   return (
     <div className="crear-wrapper">

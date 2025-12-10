@@ -6,7 +6,7 @@ import { useState } from 'react'
 const Sidebar = () => {
     const [openHistorial, setOpenHistorial] = useState(false)
     const [openComite, setOpenComites] = useState(false)
-
+    const [openProgsApre, setOpenProgsApre] = useState(false)
     return (
         <div className='ui-sidebar'>
             <div className='ui-sidebar-header'>
@@ -59,12 +59,32 @@ const Sidebar = () => {
 
                         </div>
                     )}
-                    <NavLink 
-                    to='/programas y aprendices'
-                        className={({ isActive }) => isActive ? 'ui-sidebar-item active' : 'ui-sidebar-item'}
+                     <button 
+                       className='ui-sidebar-item'
+                        onClick={() => setOpenProgsApre(!openProgsApre)}
                     >
-                        <FaUserFriends /> Programas y aprendices
-                    </NavLink>
+                        <FaUserFriends />
+                            Programas y aprendices
+                        <FaChevronDown 
+                             className={openProgsApre ? 'Si-arrow rotated' : 'Si-arrow'}
+                        />
+                    </button>
+                    {openProgsApre && (
+                        <div className='ui-dropdown-content'>
+                            <NavLink 
+                            to='/Programas'
+                            className={({ isActive }) => isActive ? 'ui-dropdown-item active' : 'ui-dropdown-item'}
+                            >
+                                Programas
+                            </NavLink>
+                            <NavLink 
+                            to='/Aprendices'
+                            className={({ isActive }) => isActive ? 'ui-dropdown-item active' : 'ui-dropdown-item'}
+                            >
+                                Aprendices
+                            </NavLink>
+                        </div>
+                    )}
                     <button 
                         className='ui-sidebar-item'
                         onClick={() => setOpenHistorial(!openHistorial)}
@@ -106,7 +126,7 @@ const Sidebar = () => {
                         <FaUsers /> Usuarios
                     </NavLink>
                     <NavLink 
-                    to='/usuarios'
+                    to='/Configuracion'
                     className={({ isActive }) => isActive ? 'ui-sidebar-item active' : 'ui-sidebar-item'}
                     >
                         <FaCog /> Configuración

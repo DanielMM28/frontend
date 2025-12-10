@@ -1,0 +1,158 @@
+
+body {
+  margin: 0;
+  background-color: #f3f3f3;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.list-wrapper {
+  padding: 40px;
+}
+
+.list-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.header-main h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #444;
+}
+
+.header-main p {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.btn-crear {
+  background-color: #62b46c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.filter-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  background-color: #fafafa;
+  padding: 15px 20px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  margin-bottom: 30px;
+}
+
+.filter-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.filter-group select,
+.filter-group input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  background-color: white;
+  appearance: none; 
+}
+
+
+.comite-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.comite-table th,
+.comite-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.comite-table th {
+  background-color: #f7f7f7;
+  color: #666;
+}
+
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.status-badge.Activo {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.status-badge.Pendiente {
+  background-color: #fff3e0;
+  color: #f57f17;
+}
+
+.action-buttons button {
+  background-color: #e0e0e0;
+  color: #444;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+
+.pagination-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.pagination-info {
+  font-size: 13px;
+  color: #666;
+  margin-right: 15px;
+}
+
+.pagination-controls button {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  margin-left: 3px;
+}
+
+.pagination-controls button.active {
+  background-color: #62b46c;
+  color: white;
+  border-color: #62b46c;
+}

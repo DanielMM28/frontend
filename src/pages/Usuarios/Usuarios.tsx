@@ -79,14 +79,17 @@ const UserManagementPage = () => {
   }, []);
 
 
-  const filteredUsers = users.filter((user) => {
-    const searchMatch =
-      `${user.nombre} ${user.apellido} ${user.correo} ${user.telefono} ${user.rol.nombre}`
-        .toLowerCase()
-        .includes(search.toLowerCase());
-    const roleMatch = filterRole === "TODOS" || user.rol.nombre === filterRole;
-    return searchMatch && roleMatch;
-  });
+ const filteredUsers = users.filter((user) => {
+  const searchMatch =
+    ` ${user.apellido ?? ""} ${user.correo ?? ""} ${user.telefono ?? ""} ${user.rol?.nombre ?? ""}`
+      .toLowerCase()
+      .includes(search.toLowerCase());
+
+  const roleMatch =
+    filterRole === "TODOS" || user.rol?.nombre === filterRole;
+
+  return searchMatch && roleMatch;
+});
 
  
   const handleAddOrEdit = (user: User) => {
@@ -212,7 +215,7 @@ const UserManagementPage = () => {
                     <td>
                       {user.nombre} {user.apellido}
                     </td>
-                    <td>{user.rol.nombre}</td>
+                    <td>{user.rol?.nombre}</td>
                     <td>{user.correo}</td>
                     <td>{user.telefono}</td>
                     <td

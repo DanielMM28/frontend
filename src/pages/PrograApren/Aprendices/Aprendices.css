@@ -1,0 +1,46 @@
+.apre-container {
+  padding: 20px;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.apre-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.filters-apre {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 8px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  border: 1px solid grey;
+}
+
+.historial-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+
+.estado-rechazado {
+  background: #dc3545;
+}
+
+.ver-btn {
+  background: #377c2b;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}

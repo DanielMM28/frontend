@@ -1,6 +1,12 @@
 import React from "react";
 import './UserSidebar.css'
 
+const usuario = JSON.parse(localStorage.getItem("user") || "null");
+
+  const nombre = usuario?.nombreCompleto || "Usuario";
+  const rol = usuario?.rolNombre || "Sin rol";
+  const correo = usuario?.correo || "Correo no registrado"
+
 interface UserSidebarProps {
   user: {
     name: string,
@@ -12,7 +18,7 @@ interface UserSidebarProps {
 }
 
 const UserSidebar: React.FC<UserSidebarProps> = ({ user }) => {
-  const NombreCompl = `${user.name} ${user.lastName}`;
+
   const fechaDeAcceso = "2025-12-02 10:30";
 
   return (
@@ -22,15 +28,17 @@ const UserSidebar: React.FC<UserSidebarProps> = ({ user }) => {
 
         <div className="avatar-sesion">
           <div className="container-img">
-            {user.avatarUrl && user.avatarUrl.length > 0 ? (
-              <img src={user.avatarUrl} alt={`Avatar de ${NombreCompl}`} className="avatar-image" width={120} height={120} />
-            ) : (
-              <div className="avatar-placeholder">{NombreCompl.charAt(0)}</div>
-            )}
+            <img
+  src="https://i.pravatar.cc/150?img=12"
+  alt="Avatar"
+  className="avatar-image"
+  width={120}
+  height={120}
+/>
           </div>
-          <p className="user-nombr-compl">{NombreCompl}</p>
-          <p className="user-email-ins">{user.emailIns}</p>
-          <div className="user-rol"><span className="role-useer">{user.rol}</span></div>
+          <p className="user-nombr-compl">{nombre}</p>
+          <p className="user-email-ins">{correo}</p>
+          <div className="user-rol"><span className="role-useer">{rol}</span></div>
           <button className="cambiar-foto-btn">Cambiar foto</button>
         </div>
 

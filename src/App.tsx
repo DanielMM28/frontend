@@ -19,6 +19,10 @@ import ForgotPass from "./pages/olvidar/olvidar.tsx";
 import CrearComite from "./pages/Comite/Crearcomite/CrearComite.tsx";
 
 import UserProfile from "./pages/Perfil/UserProfile.tsx";
+import EditarComite from "./pages/Comite/editarcomite.tsx";
+import Programas from "./pages/PrograApren/Programas/Programas.tsx";
+import Aprendices from "./pages/PrograApren/Aprendices/Aprendices.tsx";
+import UserConfig from "./pages/Configuracion/UserConfigManagement.tsx";
 
 const App = () => {
   const handleLogout = () => {
@@ -45,7 +49,7 @@ const App = () => {
           <Route path="/comite" element={<Navigate to="/comite/comites-en-curso" replace />} />
           <Route path="/comite/comites-en-curso" element={<ComitesEnCurso />} />
           <Route path="/comite/crear" element={<CrearComite />} />
-          <Route path="/comite/editar" element={<CrearComite />} />
+          <Route path="/comite/editar" element={<EditarComite />} />
           <Route path="/comites/seguimientos" element={<SeguiCompro />} />
 
           {/* Historial */}
@@ -53,8 +57,34 @@ const App = () => {
           <Route path="/historial/fichas" element={<HistorialFichas />} />
           <Route path="/historial/actas" element={<HistorialActasPage />} />
 
+          <Route path="/Programas" element={<Programas />} />
+          <Route path="/Aprendices" element={<Aprendices />} />
+
           {/* Usuarios */}
           <Route path="/usuarios" element={<UserManagementPage />} />
+
+          <Route path="/Configuracion" element={<UserConfig user={{
+            tipoIdentificacion: "",
+            documento: "",
+            fechaExpedicionDoc: "",
+            paisExpedicionDoc: "",
+            municipioExpedicionDoc: "",
+            firstName: "",
+            secondName: "",
+            firstLastName: "",
+            secondLastName: "",
+            fechaNacimiento: "",
+            email: "",
+            emailSoySena: "",
+            paisNacimiento: "",
+            departamentoNacimiento: "",
+            municipioNacimiento: "",
+            paisActual: "",
+            departamentoActual: "",
+            municipioActual: "",
+            direccionResidencia: "",
+            celular: ""
+          }} />} />
 
           {/* Perfil */}
           <Route
